@@ -1,0 +1,20 @@
+<div>
+    <table class="table">
+        <thead>
+            <th>S/N</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items; let i = index">    
+                <td>{{i + 1}}</td>
+                <td><img src="../../assets/{{item.Image}}"></td>
+                <td>{{item.Description}}</td>
+                <!-- declare click button function AddToCart, with function declared in inventory.component to bind it to newItemEvent for emitting to parent  -->
+                <td><button (click)="AddToCart(item)">Add Item to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
